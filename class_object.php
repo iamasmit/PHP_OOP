@@ -1,29 +1,33 @@
 <?php
 // Class 
-class calculation
+class Calculation
 {
     // Properties
     public $a, $b, $c;
-    // Method
+
+    // Method for addition
     public function sum()
     {
         $this->c = $this->a + $this->b;
         return $this->c;
     }
+
+    // Method for subtraction
     public function sub()
     {
         $this->c = $this->a - $this->b;
         return $this->c;
     }
 }
-// Object
-$c1 = new calculation();
+
+// Object for addition
+$c1  = new Calculation();
 $c1->a = 10;
 $c1->b = 5;
+echo "Sum Value: " . $c1->sum() . "<br>";
 
-echo "Sum Value of : " . $c1->sum() . "<br>";
-
-$c2 = new calculation();
-$c1->a = 15;
-$c1->b = 5;
-echo "Sub Value of : " . $c1->sub() . "<br>";
+// Object for subtraction
+$c2 = new Calculation();
+$c2->a = 15; // Changed from $c1 to $c2
+$c2->b = 5;  // Changed from $c1 to $c2
+echo "Sub Value: " . $c2->sub() . "<br>"; // Changed from $c1 to $c2
